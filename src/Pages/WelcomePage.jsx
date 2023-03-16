@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
+
 import Lottie from "lottie-react";
-import Button, { ButtonOutline, Features } from "../Components/Utitlity";
+import Button, { Testimonial, ButtonOutline2, Features } from "../Components/Utitlity";
 import WelcomeHeader from "../Components/Header";
 import HeroBg from "./../assets/Images/heroBg.png";
 import Story from "./../assets/Images/Story.png";
@@ -158,14 +168,39 @@ export default function WelcomePage() {
           <p className="mt-6 text-white font-medium">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
             ipsum aliquam ea? Nulla quas blanditiis accusantium iure maiores
-            corporis ea, animi ipsam aliquid saepe, doloremque laborum assumenda
-            asperiores soluta illum!
+            .
           </p>
+          <ButtonOutline2 Extend='mt-5'>
+            Read more
+          </ButtonOutline2>
         </div>
         <div className="successImg w-full md:w-4/12 flex mt-10 md:mt-0 flex-row justify-center items-center">
           <img src="images/black-couple.png" alt="Black-couple" />
         </div>
       </section>
+
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+          loop: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <Testimonial />
+        </SwiperSlide>
+        
+      </Swiper>
     </>
   );
 }
