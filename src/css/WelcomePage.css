@@ -1,0 +1,12 @@
+:root{
+    --Pink900: #D70A6D,
+}
+
+.successImg {
+    border-radius: 200px 200px 0px 0px;
+    -moz-border-radius: 200px 200px 0px 0px;
+    -webkit-border-radius: 200px 200px 0px 0px;
+    border: 7px solid black;
+    overflow: hidden;
+}
+
