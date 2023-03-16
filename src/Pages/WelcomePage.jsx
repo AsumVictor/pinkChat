@@ -1,4 +1,5 @@
 import React from "react";
+import Lottie from "lottie-react";
 import Button, { ButtonOutline, Features } from "../Components/Utitlity";
 import WelcomeHeader from "../Components/Header";
 import HeroBg from "./../assets/Images/heroBg.png";
@@ -6,9 +7,11 @@ import HeroBgMobile from "./../assets/Images/heroBgMobile.png";
 import Group from "./../assets/Images/cummunityPic.png";
 import Valinetine from "./../assets/Images/valentine.png";
 import FeaturesData from "../Components/Features";
+import ChatScreen from "../assets/Animations/Chatscreen.json";
+import VideoCall from "../assets/Animations/VideoChat.json";
 
 export default function WelcomePage() {
-    console.log(FeaturesData);
+  console.log(FeaturesData);
   return (
     <>
       <WelcomeHeader />
@@ -72,15 +75,55 @@ export default function WelcomePage() {
           </p>
         </div>
         <div className="w-full md:w-7/12 flex flex-auto flex-wrap justify-around pb-2">
-       {FeaturesData.map(feature=>(
-          <Features 
-          icon={feature.icon}
-          title={feature.title}
-          description={feature.description}
-          />
-       ))}
+          {FeaturesData.map((feature) => (
+            <Features
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </section>
+
+      <section className="flex w-full flex-auto justify-between flex-wrap bg-Pink600 mt-5 px-3 md:px-10 rounded-t-3xl">
+        <div className="w-full md:w-5/12 flex flex-col justify-center">
+          <h3 className="text-3xl md:text-5xl mt-10 font-bold text-white px-2 text-center">Efficient Messaging</h3>
+          <p className="text-white mt-10 font-bold px-2">
+            Recusandae placeat laudantium dolore ipsum sed, pariatur voluptate
+            excepturi nesciunt amet porro est vero, consectetur minima ea
+           elit. Iure eum at libero praesentium, facilis repellat tempore obcaecat
+          </p>
+        </div>
+        <div className="w-full md:w-6/12 flex mt-20 md:mt-0 flex-row justify-center items-center">
+          <Lottie
+            animationData={ChatScreen}
+            loop={true}
+            style={{ width: 600 }}
+            className="-mt-20 "
+          />
+        </div>
+      </section>
+
+      <section className="flex w-full flex-col md:flex-row-reverse flex-wrap-reverse justify-between bg-white mt-5 px-3 md:px-10 rounded-t-3xl">
+        <div className="w-full md:w-5/12 flex flex-col justify-center">
+          <h3 className="text-3xl md:text-5xl mt-10 font-bold text-Pink900 px-2 text-center">Real-time Video call</h3>
+          <p className="text-Pink900 mt-10 font-bold px-2">
+            Recusandae placeat laudantium dolore ipsum sed, pariatur voluptate
+            excepturi nesciunt amet porro est vero, consectetur minima ea
+           elit. Iure eum at libero praesentium, facilis repellat tempore obcaecat
+          </p>
+        </div>
+        <div className="w-full md:w-6/12 flex mt-20 md:mt-0 flex-row justify-center items-center">
+          <Lottie
+            animationData={VideoCall}
+            loop={true}
+            style={{ width: 600 }}
+            className="-mt-20 "
+          />
+        </div>
+        
+      </section>
+
     </>
   );
 }
