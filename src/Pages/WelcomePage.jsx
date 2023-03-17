@@ -10,7 +10,11 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 import Testimonials from "../Components/Testimonials";
 import Lottie from "lottie-react";
-import Button, { Testimonial, ButtonOutline2, Features } from "../Components/Utitlity";
+import Button, {
+  Testimonial,
+  ButtonOutline2,
+  Features,
+} from "../Components/Utitlity";
 import WelcomeHeader from "../Components/Header";
 import HeroBg from "./../assets/Images/heroBg.png";
 import Story from "./../assets/Images/Story.png";
@@ -167,17 +171,18 @@ export default function WelcomePage() {
           </p>
           <p className="mt-6 text-white font-medium">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            ipsum aliquam ea? Nulla quas blanditiis accusantium iure maiores
-            .
+            ipsum aliquam ea? Nulla quas blanditiis accusantium iure maiores .
           </p>
-          <ButtonOutline2 Extend='mt-5'>
-            Read more
-          </ButtonOutline2>
+          <ButtonOutline2 Extend="mt-5">Read more</ButtonOutline2>
         </div>
         <div className="successImg w-full md:w-4/12 flex mt-10 md:mt-0 flex-row justify-center items-center">
           <img src="images/black-couple.png" alt="Black-couple" />
         </div>
       </section>
+
+      <div className="text-Pink900 mt-10 text-3xl font-bold text-center">
+        What our beloved Users say
+      </div>
 
       <Swiper
         effect={"coverflow"}
@@ -196,16 +201,21 @@ export default function WelcomePage() {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-        {Testimonials.map(testimonial=>(
+        {Testimonials.map((testimonial) => (
           <SwiperSlide>
-          <Testimonial 
-          name={testimonial.name}
-          message={testimonial.message}/>
-        </SwiperSlide>
-        
+            <Testimonial
+              name={testimonial.name}
+              message={testimonial.message}
+            />
+          </SwiperSlide>
         ))}
-        
       </Swiper>
+
+ <div className="download mt-10 pb-20">
+  <h4 className="text-PinkBlack900 font-bold text-center text-3xl">Dowload our mobile app on Google Plays store and App store</h4>
+  
+ </div>
+
     </>
   );
 }

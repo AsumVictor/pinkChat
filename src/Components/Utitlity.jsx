@@ -69,10 +69,10 @@ export function Testimonial(props) {
           <span className="text-Pink900 text-2xl">
             <i class="fa fa-quote-left"></i>
           </span>
-          <div className="overflow-hidden" style={{height:'180px'}}>
-          {props.message}
+          <div className="overflow-hidden" style={{ height: "180px" }}>
+            {props.message}
           </div>
-          
+
           <span className="text-Pink900 float-right text-2xl">
             <i class="fa fa-quote-right"></i>
           </span>

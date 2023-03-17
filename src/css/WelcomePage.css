@@ -10,7 +10,6 @@
   overflow: hidden;
 }
 
-
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -21,14 +20,7 @@
 }
 
 .swiper-slide {
-  background-position: center;
-  background-size: cover;
   width: 270px;
   height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  background-color: red;
+  user-select: none;
 }
