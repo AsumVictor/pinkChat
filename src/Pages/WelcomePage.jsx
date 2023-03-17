@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-
+import Testimonials from "../Components/Testimonials";
 import Lottie from "lottie-react";
 import Button, { Testimonial, ButtonOutline2, Features } from "../Components/Utitlity";
 import WelcomeHeader from "../Components/Header";
@@ -192,13 +192,18 @@ export default function WelcomePage() {
           slideShadows: true,
           loop: true,
         }}
-        pagination={true}
+        pagination={false}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Testimonial />
+        {Testimonials.map(testimonial=>(
+          <SwiperSlide>
+          <Testimonial 
+          name={testimonial.name}
+          message={testimonial.message}/>
         </SwiperSlide>
+        
+        ))}
         
       </Swiper>
     </>
