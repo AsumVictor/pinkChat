@@ -211,9 +211,16 @@ export default function WelcomePage() {
         ))}
       </Swiper>
 
- <div className="download mt-10 pb-20">
+ <div className="download mt-10 pb-20 flex flex-col items-center">
   <h4 className="text-PinkBlack900 font-bold text-center text-3xl">Dowload our mobile app on Google Plays store and App store</h4>
-  
+   <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2" >
+    <img src="images/google-play.png" alt="" style={{width:'70px',}} />
+    <span className="text-2xl font-bold text-PinkBlack900">Get on Plays Store</span>
+   </button>
+   <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2" >
+    <img src="images/app-store.png" alt="" style={{width:'70px',}} />
+    <span className="text-2xl font-bold text-PinkBlack900">Get on Apps Store</span>
+   </button>
  </div>
 
     </>
