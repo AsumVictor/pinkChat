@@ -192,7 +192,7 @@ export default function WelcomePage() {
           slideShadows: true,
           loop: true,
         }}
-        pagination={false}
+        pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
