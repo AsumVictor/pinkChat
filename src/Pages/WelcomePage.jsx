@@ -223,6 +223,12 @@ export default function WelcomePage() {
    </button>
  </div>
 
+<footer
+className="py-20 w-full px-3 md:px-10 rounded-t-3xl bg-Pink900"
+>
+Footer: Will be added later
+</footer>
+
     </>
   );
 }
