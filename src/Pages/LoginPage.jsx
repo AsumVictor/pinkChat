@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState} from "react";
 import Buttons, { InputDynamic } from "../Components/Utitlity";
 import "../css/login.css";
 import { Link } from "react-router-dom";
@@ -10,7 +10,23 @@ export default function Login() {
  //Submit Form
  function Handlesubmit(event){
     event.preventDefault()
+    console.log(userData);
  }
+
+ //Handle FormData
+ const [userData, setUserData] = useState({
+    userName: '',
+    Password: '',
+ })
+
+ //Control Form data
+ function HandleInputChange(e){
+    const {name, value} = e.target
+    setUserData((prevData)=>{
+        return{...prevData,[name]: value}
+    })
+ }
+
 
   return (
     <main className="w-full py-10  px-3 flex flex-col items-center justify-center relative overflow-hidden">
@@ -45,13 +61,17 @@ export default function Login() {
         <InputDynamic
           type="text"
           name="userName"
-          label="Email or Username"
+          label="Username"
+          value={userData.userName}
+          handleChange={(e)=>HandleInputChange(e)}
           InputParentExtendClass="mt-10"
         />
         <InputDynamic
           type="password"
           name="Password"
           label="password"
+          value={userData.password}
+          handleChange={(e)=>HandleInputChange(e)}
           InputParentExtendClass="mt-10"
         />
         <Link className="self-start text-blue-600 underline">
@@ -59,7 +79,7 @@ export default function Login() {
         </Link>
         <Buttons Extend="mt-10 text-lg px-20">Login</Buttons>
         <p className="mt-10 self-start">
-          I'm new.{" "}
+          I'm new.
           <Link className="underline text-blue-800 font-bold">
             Create an account
           </Link>

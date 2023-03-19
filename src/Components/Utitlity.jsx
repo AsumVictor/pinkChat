@@ -4,7 +4,7 @@ import '../css/Utility.css'
 export default function Buttons(props) {
   return (
     <button
-      className={`py-2 bg-Pink900 cursor-pointer  hover:bg-Pink600 px-4 font-bold text-white rounded-3xl
+      className={`py-2 bg-Pink900 cursor-pointer  hover:bg-Pink600 font-bold text-white rounded-3xl
       flex flex-row items-center justify-center flex-nowrap ${props.Extend}`}
       onClick={props.Action}
     >
