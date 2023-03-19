@@ -1,0 +1,12 @@
+body{
+    height: 100vh;
+}
+
+main{
+    height: 100%;
+}
+
+form{
+    background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.445),rgba(255, 255, 255, 0.486),rgba(255, 255, 255, 0.623));
+    backdrop-filter: blur(30px);
+}

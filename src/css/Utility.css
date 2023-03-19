@@ -1,0 +1,23 @@
+:root{
+    --Pink900: '#D70A6D';
+    --Pink600: '#E84393';
+}
+
+*{
+    transition: all .369s ease-in-out;
+}
+
+
+.form-group{
+    border: 3px solid #e8439367;
+}
+
+.form-group.active{
+    border: 3px solid #D70A6D;
+}
+
+.form-group.active .label{
+ transform: translateY(-25px);
+ font-weight: bold;
+ color: #D70A6D;
+}

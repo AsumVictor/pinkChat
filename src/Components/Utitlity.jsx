@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Utility.css'
 
 export default function Buttons(props) {
   return (
@@ -79,5 +80,35 @@ export function Testimonial(props) {
         </div>
       </article>
     </>
+  );
+}
+
+export function InputDynamic(props) {
+//focus inputs
+function FocusOnInput(e){
+  e.target.parentNode.classList.add('active')
+}
+
+function BlurOnInput(e){
+  if (e.target.value=='') {
+    e.target.parentNode.classList.remove('active')
+  }
+}
+
+  return (
+    <div
+      className={`${props.InputParentExtendClass} form-group w-full flex justify-start items-center relative rounded-2xl px-4`}
+      style={{ height: "1.3cm" }}
+    >
+      <input
+        {...props}
+        onFocus={FocusOnInput}
+        onBlur={BlurOnInput}
+        className={`w-full h-full absolute bg-transparent top-0 left-0 outline-none text-lg px-3 
+         text-PinkBlack900 invalid:text-red-900 ${props.InputExtendClass}`}
+        onChange={props.handleChange}
+      />
+      <div className="label px-2 text-sm md:text-lg capitalize bg-white">{props.label}</div>
+    </div>
   );
 }

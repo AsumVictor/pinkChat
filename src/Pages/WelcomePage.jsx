@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -55,12 +56,16 @@ export default function WelcomePage() {
             site.
           </p>
           <div className="flex justify-center">
-            <Button Extend="hidden md:block self-center mt-10">
+           <Link to='/Register'>
+           <Button Extend="hidden md:block self-center mt-10">
               Join the Community
             </Button>
+           </Link> 
+           <Link to='/Register'>
             <Button Extend="block md:hidden self-center mt-10">
               Create an account
             </Button>
+            </Link>
           </div>
 
           <div className="flex flex-row flex-wrap justify-around space-y-3 items-center mt-10">

@@ -21,10 +21,10 @@ export default function WelcomeHeader() {
         <Link className="hover:text-Pink900 hover:underline">Help</Link>
       </nav>
       <div className="flex flex-row space-x-5 items-center">
-        <Link className="hidden md:block">
+        <Link to='/Register' className="hidden md:block">
           <ButtonOutline Extend="px-2">  Create and Account</ButtonOutline>
         </Link>
-        <Link>
+        <Link to='/Login'>
           <Buttons Extend="px-10 "><HiArrowRightOnRectangle /> Login</Buttons>
         </Link>
       </div>
