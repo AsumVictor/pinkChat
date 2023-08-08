@@ -1,2 +1,2 @@
-# Suga Social Media and Dating Site
+# PinkChat Social Media and Dating Site
 

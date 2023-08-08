@@ -10,8 +10,8 @@ export default function WelcomeHeader() {
       <div className="logo flex flex-row items-center space-x-2">
         <img src={Logo} alt="Logo" width={60} />
         <span className="text-3xl font-semibold">
-          <span className="text-Pink900">S</span>u
-          <span className="text-Pink900">G</span>a
+          <span className="text-Pink900">P</span>ink
+          <span className="text-Pink900">C</span>hat
         </span>
       </div>
       <nav className="hidden md:flex flex-row space-x-5 font-semibold">
