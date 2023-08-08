@@ -40,7 +40,7 @@ export function Features(props) {
   return (
     <div
       className="border-4 border-Pink900 py-3 px-3 rounded-3xl relative mt-10 mx-5"
-      style={{ width: "250px" }}
+      style={{ width: "270px" }}
     >
       <div
         className="rounded-full p-2 bg-Pink900 text-white text-4xl flex 

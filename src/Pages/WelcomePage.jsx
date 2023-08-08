@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 import Testimonials from "../Components/Testimonials";
 import Lottie from "lottie-react";
@@ -46,13 +44,14 @@ export default function WelcomePage() {
 
         <div className="w-full md:w-7/12 py-5 px-3 md:px-10 justify-center items-center z-10">
           <h1 className="text-4xl font-bold mt-2 text-center">
-            Best Dating site in
-            <strong className="text-Pink900"> African</strong>
+            Welcome to
+            <strong className="text-Pink900"> Pink Chat</strong>
           </h1>
           <p className="px-5 md:px-20 text-center mt-10">
-            SuGa's Playground connects you with like-minded individuals to help
-            you find love and happiness through our fun and easy-to-use dating
-            site.
+            Join us for meaningful connections, vibrant conversations, and a
+            safe space to share your relationship experiences, facts, and
+            advice. Whether it's celebrating lasting love or exploring the
+            dating world, Pink Chat is here to help you thrive.
           </p>
           <div className="flex justify-center">
             <Button Extend="hidden md:block self-center mt-10">
@@ -80,13 +79,13 @@ export default function WelcomePage() {
       >
         <div className="w-full md:w-4/12 mt-5">
           <h2 className="text-4xl capitalize font-bold text-center underline text-Pink900">
-            Why Suga ?
+            Why PinkChat ?
           </h2>
           <p className="mt-7 px-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Laudantium, rem nostrum id quos ipsam consequuntur magnam modi nobis
-            omnis debitis. Temporibus repellat incidunt nihil mollitia quia rem
-            quisquam sit cumque.
+            Connect with like-minded individuals, explore new beginnings, and
+            enjoy privacy at its best. Your journey is important to us, and
+            PinkChat ensures a safe and intimate space for you to express,
+            connect, and celebrate.
           </p>
         </div>
         <div className="w-full md:w-7/12 flex flex-auto flex-wrap justify-around pb-2">
@@ -106,9 +105,9 @@ export default function WelcomePage() {
             Efficient Messaging
           </h3>
           <p className="text-white mt-10 font-bold px-2">
-            Recusandae placeat laudantium dolore ipsum sed, pariatur voluptate
-            excepturi nesciunt amet porro est vero, consectetur minima ea elit.
-            Iure eum at libero praesentium, facilis repellat tempore obcaecat
+            Experience efficient communication like never before with PinkChat.
+            Our messaging system is designed to make your conversations smooth
+            and hassle-free. Connect effortlessly and stay engaged with ease.
           </p>
         </div>
         <div className="w-full md:w-6/12 flex mt-20 md:mt-0 flex-row justify-center items-center">
@@ -127,9 +126,10 @@ export default function WelcomePage() {
             Real-time Video call
           </h3>
           <p className="text-PinkBlack900 mt-10 font-bold px-2">
-            Recusandae placeat laudantium dolore ipsum sed, pariatur voluptate
-            excepturi nesciunt amet porro est vero, consectetur minima ea elit.
-            Iure eum at libero praesentium, facilis repellat tempore obcaecat
+            Discover a new way to communicate with PinkChat's video calls that
+            include augmented reality (AR). Enjoy more lifelike interactions
+            with added AR elements that bring a special touch to your
+            conversations.
           </p>
         </div>
         <div className="w-full md:w-6/12 flex mt-20 md:mt-0 flex-row justify-center items-center">
@@ -148,9 +148,10 @@ export default function WelcomePage() {
             Add Stories and Reels
           </h3>
           <p className="text-PinkBlack900 mt-10 font-bold px-2">
-            Recusandae placeat laudantium dolore ipsum sed, pariatur voluptate
-            excepturi nesciunt amet porro est vero, consectetur minima ea elit.
-            Iure eum at libero praesentium, facilis repellat tempore obcaecat
+            PinkChat brings you an array of exciting features, including Stories
+            and Reels. Express yourself through captivating stories and short
+            reels, sharing your unique moments with others. Join us in creating
+            a vibrant community where your creativity knows no bounds!
           </p>
         </div>
         <div className="w-full md:w-6/12 flex md:mt-0 flex-row justify-center items-center">
@@ -161,17 +162,14 @@ export default function WelcomePage() {
       <section className="flex w-full flex-col md:flex-row py-10 flex-wrap justify-between bg-Pink900 mt-5 px-3 md:px-10 rounded-t-3xl">
         <div className="w-full md:w-5/12 flex flex-col justify-center">
           <h3 className="text-3xl md:text-5xl mt-10 font-bold text-white px-2 text-center capitalize">
-            How I met Roseline
+            How I met Regeimi
           </h3>
           <p className="mt-6 text-white font-medium">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-            recusandae molestiae et eveniet, ullam excepturi temporibus, aperiam
-            voluptate atque veniam minima, qui asperiores magnam aut. Quo iure
-            aspernatur vel ducimus?
-          </p>
-          <p className="mt-6 text-white font-medium">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            ipsum aliquam ea? Nulla quas blanditiis accusantium iure maiores .
+            Let me take you through the wonderful journey of how I crossed paths
+            with Regeimi on PinkChat. Our virtual encounter turned into
+            something truly extraordinary, filled with conversations, shared
+            interests, and the magic of connecting through the app. Join me as I
+            unfold the story of how PinkChat brought us together....
           </p>
           <ButtonOutline2 Extend="mt-5">Read more</ButtonOutline2>
         </div>
@@ -205,30 +203,33 @@ export default function WelcomePage() {
           <SwiperSlide>
             <Testimonial
               name={testimonial.name}
-              message={testimonial.message}
+              message={testimonial.message.slice(0,210) + '...'}
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
- <div className="download mt-10 pb-20 flex flex-col items-center">
-  <h4 className="text-PinkBlack900 font-bold text-center text-3xl">Dowload our mobile app on Google Plays store and App store</h4>
-   <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2" >
-    <img src="images/google-play.png" alt="" style={{width:'70px',}} />
-    <span className="text-2xl font-bold text-PinkBlack900">Get on Plays Store</span>
-   </button>
-   <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2" >
-    <img src="images/app-store.png" alt="" style={{width:'70px',}} />
-    <span className="text-2xl font-bold text-PinkBlack900">Get on Apps Store</span>
-   </button>
- </div>
+      <div className="download mt-10 pb-20 flex flex-col items-center">
+        <h4 className="text-PinkBlack900 font-bold text-center text-3xl">
+          Dowload our mobile app on Google Plays store and App store
+        </h4>
+        <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2">
+          <img src="images/google-play.png" alt="" style={{ width: "70px" }} />
+          <span className="text-2xl font-bold text-PinkBlack900">
+            Get on Plays Store
+          </span>
+        </button>
+        <button className="border-2 p-2 rounded-3xl mt-10 flex flex-row items-center space-x-2">
+          <img src="images/app-store.png" alt="" style={{ width: "70px" }} />
+          <span className="text-2xl font-bold text-PinkBlack900">
+            Get on Apps Store
+          </span>
+        </button>
+      </div>
 
-<footer
-className="py-20 w-full px-3 md:px-10 rounded-t-3xl bg-Pink900"
->
-Footer: Will be added later
-</footer>
-
+      <footer className="py-20 w-full px-3 md:px-10 rounded-t-3xl bg-Pink900">
+        Footer: Will be added later
+      </footer>
     </>
   );
 }
